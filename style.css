@@ -1,0 +1,701 @@
+*{
+    box-sizing: border-box; /* pour que les padding et margin ne modifient pas la taille de l‘élément */
+}
+
+body{
+    background-color: #f4f6e4;
+    font-family: Arial, sans-serif;
+    margin: 0; /* pour éviter les marges par défaut du navigateur */
+    line-height: 1.5; /* hauteur de ligne pour la lecture à l‘écran*/
+    text-decoration: none; 
+     color: inherit;
+    overflow-x: hidden; /* Masque le débordement horizontal */
+    }
+
+
+
+/* Guarde */
+
+.bodyguard{
+
+    width: 100vw;       /* 100% de la largeur de la fenêtre */
+    height: 400px;      /* 100% de la hauteur de la fenêtre */
+        margin: 0;           /* Enlève les marges par défaut du navigateur */
+        padding: 0;          /* Enlève les paddings par défaut */
+    }
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Centre les éléments horizontalement */
+    align-items: center;
+    background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+    gap: 20px; /* Espace entre les images */
+    overflow: hidden; /* Évite tout débordement éventuel */
+    padding: 24px;
+    grid-row: auto auto;
+    margin-top: -100px;
+   
+   
+}
+
+.logo:hover{
+    animation: wiggle 0.5s; /* pour animer le logo en survole */
+  }
+.logo{
+    margin-top:30%;
+}
+  
+  
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.header1 img{
+    display: flex;
+}
+
+.lien{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
+    margin-bottom: 50px;
+    font-family: "cofo-sans-pixel", sans-serif;
+    color: #f4f6e4;;
+    font-size: 150%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    width: 100vw; /* Prend toute la largeur de la fenêtre */
+}
+
+.lien a{
+    text-decoration: none;
+    color: #f4f6e4;
+}
+
+.lien a {
+    transition: color 0.5s ease; /* Ajout d‘une transition pour une animation plus fluide */
+}
+
+.lien a:hover {
+    animation: colorchange 1s ease forwards; /* Applique l‘animation avec durée et direction */
+}
+
+@keyframes colorchange {
+    0%, 100% {
+        color: #182bf8; /* Couleur initiale et finale */}
+    40% {
+        color:  #182bf8; /* Exemple de couleur au milieu de l‘animation */}
+    60% {
+        color: #182bf8; /* Exemple de couleur au milieu de l‘animation */ }
+    20%, 50%, 80% {
+        color: #182bf8; /* Couleur intermédiaire */}
+}
+
+/* CV */
+
+.CV {
+    display: grid;
+    grid-template-columns: 60% 35%; /* Tailles des colonnes */
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  .CVleft {
+    padding: 20px;
+    margin: 35px 0 0 75px; /* Combine les marges en une seule ligne */
+  }
+
+
+  .CVright img {
+    justify-content: center;
+    place-items: center; /* Centre les éléments horizontalement et verticalement */
+    position: bottom;
+  }
+
+  
+  
+  /* Styles de titres */
+  .h1CV, .h2CV, .h2CVV {
+    font-family: "cofo-sans-pixel", sans-serif;
+  }
+  
+  .h1CV {
+    color: rgba(255, 84, 22, 0.8);
+    font-size: 3.5em; /* Conversion du % en em pour simplifier la lecture */
+  }
+  
+  .h2CV {
+    color: #333; /* Correction de la couleur */
+    font-size: 2em;
+  }
+  
+  .LienCV{
+    text-decoration: none;
+    color:  rgba(255, 84, 22, 0.8);
+}
+ .CVleft h1{
+    font-family:"cofo-sans-pixel", sans-serif ;
+  }
+  
+  .CV img {
+   margin-top: 50px;
+  }
+
+/* Header Général */
+
+
+/* Style général pour le header */
+.header {
+  display: grid;
+  grid-template-columns: max-content auto;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+ 
+  top: 0;
+  z-index: 999;
+}
+
+/* Section de gauche */
+/* Section de gauche */
+.headerL {
+  display: flex;               /* Active le mode flex */
+  align-items: center;         /* Centre les éléments verticalement */
+  gap: 10px;                   /* Espace entre le favicon et le logo écrit */
+  margin-top: 10PX;               /* Enlève le margin-top s’il n'est plus nécessaire */
+}
+
+
+
+/* Navigation du header */
+.header-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.header-nav a {
+  color: #182bf8;
+  font-size: large;
+  text-decoration: none;
+  font-family: "cofo-sans-pixel", sans-serif ;
+}
+
+
+/* Section de droite (liens) */
+.headerR {
+  display: flex;
+  gap: 50px;
+  font-size: 30px;
+}
+
+.headerR a {
+  text-decoration: none;
+  color: rgba(255, 84, 22, 0.8);
+  font-family: "cofo-sans-pixel", sans-serif;
+}
+
+/* Responsivité avec media queries */
+@media (max-width: 768px) {
+  .header {
+      display: flex;                /* Passe en flexbox pour alignement en colonne */
+      flex-direction: column;       /* Les éléments seront empilés en colonne */
+      align-items: center;          /* Centre les éléments horizontalement */
+      padding: 10px 0;
+      gap: 15px;                    /* Ajoute un petit espace entre les sections */
+  }
+
+  .headerL {
+      margin-top: 10px;
+  }
+
+  .headerL img {
+      width: 80px; /* Réduit la taille de l‘image logo */
+  }
+
+  .headerR {
+      font-size: 20px;
+      gap: 20px;
+      justify-content: center;      /* Centre les liens */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerL img {
+      width: 60px; /* Plus petit pour les très petits écrans */
+  }
+
+  .headerR {
+      font-size: 16px;
+  }
+
+  .header-nav a {
+      font-size: medium;
+  }
+}
+
+
+.headerR a {
+    transition: color 0.5s ease; /* Ajout d‘une transition pour une animation plus fluide */
+}
+
+.headerR a:hover {
+    animation: colorchange 1s ease forwards; /* Applique l‘animation avec durée et direction */
+}
+
+@keyframes colorchange {
+    0%, 100% {
+        color: #182bf8; /* Couleur initiale et finale */}
+    40% {
+        color:  #182bf8; /* Exemple de couleur au milieu de l‘animation */}
+    60% {
+        color: #182bf8; /* Exemple de couleur au milieu de l‘animation */ }
+    20%, 50%, 80% {
+        color: #182bf8; /* Couleur intermédiaire */}
+}
+
+
+.logoG:hover{
+    animation: wiggle 0.5s; /* pour animer le logo en survole */
+  }
+  
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+/* Bouton Top */
+
+  #backToTopBtn {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;      /* Ajuste la distance par rapport au bord droit */
+    width: 50px;       /* Largeur du bouton */
+    height: 50px;      /* Hauteur du bouton */
+    display: none;        /* Masqué par défaut */
+    background-color:  rgba(255, 84, 22, 0.8); /* Couleur de fond */
+    color: white;         /* Couleur du texte */
+    border: none;
+    padding: 0px 0px;
+    font-size:60px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Petit effet d‘ombre */
+    transition: opacity 0.3s;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+   top: 90%;
+   font-family: "cofo-sans-pixel", sans-serif;
+  
+  }
+  #backToTopBtn:hover {
+    background-color: #d63d0f; /* Couleur au survol */
+  }
+
+
+/* Page Projet */
+.Projet {
+  display: flex;
+  gap: 0; /* Pas d‘espace entre les colonnes */
+  margin: 24px;
+}
+
+.column {
+  flex: 1; /* Les colonnes prennent la même largeur */
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Pas d‘espace entre les images verticalement */
+  margin-top: 24px;
+}
+
+.Projet img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 5px 5px;
+  border-radius: 15px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7); /* Filtre gris et opacité pour recouvrir l‘icône */
+  transition: filter 0.3s ease; /* Transition douce lors du changement de filtre */
+  position: relative; /* Nécessaire pour positionner le liseré au bas de l‘icône */
+}
+
+.icon:hover {
+  filter: grayscale(0%) opacity(1); /* Retirer le filtre gris et augmenter l‘opacité */
+}
+
+/* Conteneur de l‘image avec le titre */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-title {
+  position: absolute;
+  z-index: 1; /* Plus la valeur est élevée, plus l‘élément est au-dessus */
+  top: 10px; /* Positionne le titre légèrement au-dessus du bas */
+  left: 50%;
+  transform: translateX(-50%); /* Centre le titre horizontalement */
+  color: white;
+  background-color: rgba(255, 84, 22, 0.8); /* Fond semi-transparent */
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px; /* Taille par défaut */
+  font-family: "cofo-sans-pixel", sans-serif;
+  opacity: 0; /* Masque le titre par défaut */
+  transition: opacity 0.3s ease; /* Transition pour l‘apparition du titre */
+}
+
+/* Pour les écrans de taille inférieure à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+  .image-title {
+    font-size: 14px; /* Réduction de la taille du texte */
+  }
+}
+
+/* Pour les écrans de taille inférieure à 480px (petits téléphones) */
+@media (max-width: 480px) {
+  .image-title {
+    font-size: 12px; /* Encore plus petit pour les petits téléphones */
+  }
+}
+
+/* Effet au survol de l‘image : titre apparaît */
+.image-container:hover .image-title {
+  opacity: 1; /* Affiche le titre au survol */
+}
+
+/* All */
+/* Style général pour la grille */
+.all {
+  display: grid;
+  grid-template-columns: 25% 75%; /* Taille des colonnes en mode bureau */
+  gap: 10px;
+}
+
+.all img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Section de gauche */
+.leftC {
+  padding: 10px;
+  margin-left: 45px;
+  margin-top: 35px;
+  position: sticky;
+  top: 95px;
+  align-self: start;
+}
+
+/* Style des titres et paragraphes */
+.h2in {
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: rgba(255, 84, 22, 0.8);
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: #333;
+  font-size: 30px;
+}
+
+p {
+  font-family: "arial";
+  color: #333;
+  font-size: 16px;
+  margin-right: 30px;
+}
+
+/* Section de droite */
+.rightC {
+  padding: 20px;
+  margin-right: 45px;
+  margin-top: 35px;
+}
+
+.mag {
+  padding: 20px;
+  justify-self: end;
+}
+
+/* Responsivité pour petits écrans */
+@media (max-width: 768px) {
+  .all {
+    grid-template-columns: 1fr; /* Passe en une seule colonne */
+    gap: 20px;
+  }
+
+  .leftC, .rightC {
+    margin: 0 auto;         /* Centre les éléments */
+    padding: 10px 15px;     /* Moins de padding pour économiser de l‘espace */
+    position: static;       /* Supprime l‘effet "sticky" */
+    top: auto;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: 24px; /* Taille de police réduite pour petits écrans */
+  }
+
+  p {
+    font-size: 16px; /* Légèrement plus grand pour lisibilité sur mobile */
+    margin-right: 0; /* Supprime la marge à droite */
+  }
+}
+
+@media (max-width: 480px) {
+  .all {
+    gap: 15px; /* Espace plus petit entre les éléments */
+  }
+
+  .h2in {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+
+/* Ouroboros */
+
+.OURO{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Trois colonnes de largeur égale */
+  padding: 24px; /* Espacement interne */
+  gap: 24px; /* Espace entre les éléments */
+}
+
+.OUROC
+{
+  height: auto;
+  width: 75%;
+  margin-left: 10%;
+  
+}
+
+/* Typographie */
+
+.STAB{
+  display: grid;
+  grid-template-columns:  33% 33% 33%; /* Trois colonnes de largeur égale */
+  padding: 24px; /* Espacement interne */
+  gap: 24px; /* Espace entre les éléments */
+  justify-content: center;
+}
+
+
+
+/* BIG */
+
+.STAB img {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Animation de l‘agrandissement et ajout de l‘ombre */
+.STAB img:hover {
+  transform: scale(2); /* Agrandissement */
+  box-shadow: 0px 8px 20px rgba(6, 6, 13, 0.5); /* Ombre */
+}
+
+/* Définition de l‘animation grow */
+@keyframes grow {
+  100% {
+    transform: scale(2); /* Agrandissement de 120% */
+  }
+} 
+
+/* Carrousel */
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column; /* Mettre en colonne pour que le texte soit en dessous */
+  align-items: center;
+  gap: 10px; /* Espace entre le texte et le carrousel */
+}
+
+.slide {
+  width: 100%;
+}
+
+.carousel-text {
+  font-size: 100%;
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 75%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-container img {
+  width: 70%;
+}
+
+
+
+/* LA DISPARITION */
+.DISP{
+  gap: 24px;
+  padding: 24px;
+}
+
+
+.CDISP{
+  position: relative;
+  width: 55%; /* Ajustez pour que l’image soit plus à droite */
+  max-width: 90%;
+  margin-left: 22%; /* Permet de centrer ou de déplacer l’image à droite */
+  margin-right: 20px; /* Ajustez selon l’espace voulu à droite */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.CDISP img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* Korax */
+
+.KORAX{
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+
+.Trypo{
+  display: grid;
+  grid-template-columns: 25% 75%; /* Trois colonnes de largeur égale */
+  padding: 24px; /* Espacement interne */
+  gap: 24px; /* Espace entre les éléments */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+
+.TrypoK{
+  display: grid;
+  grid-template-columns:  33% 33% 33%; /* Trois colonnes de largeur égale */
+  padding: 10px; /* Espacement interne */
+  gap: 10px; /* Espace entre les éléments */
+  justify-content: center;
+}
+
+/* BIG */
+
+.big2 img {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Animation de l‘agrandissement et ajout de l‘ombre */
+.big2 img:hover {
+  transform: scale(2); /* Agrandissement */
+  box-shadow: 0px 8px 20px rgba(6, 6, 13, 0.5); /* Ombre */
+}
+
+/* Définition de l‘animation grow */
+@keyframes grow {
+  100% {
+    transform: scale(2); /* Agrandissement de 120% */
+  }
+} 
+
+
+/*Couverture */
+
+.Couv{
+  display: grid;
+  grid-template-columns:  33% 77%; /* Trois colonnes de largeur égale */
+  padding: 24px; /* Espacement interne */
+  gap: 24px; /* Espace entre les éléments */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+
+.Couv p{
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: #333;
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+  margin-bottom: 0px;
+}
+
+/* Edgar Allan Poe */
+
+.EAP{
+  display: grid;
+  grid-template-columns: 20% 60% 20%; /* Trois colonnes de largeur égale */
+  padding: 10px; /* Espacement interne */
+  gap: 10px; /* Espace entre les éléments */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+  padding-bottom: 30px;
+}
+
+.EAP1{
+  display: grid;
+  grid-template-columns: 33% 33% 33%; /* Trois colonnes de largeur égale */
+  padding: 10px; /* Espacement interne */
+  gap: 10px; /* Espace entre les éléments */
+  padding-bottom: 30px;
+}
+
+.EAPbis{
+  grid-column: span 2;
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+
+.EAPbis2{
+  grid-column: span 3;
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+} 
+
+.EAP2{
+  display: grid;
+  grid-template-columns: 50% 50%; /* Trois colonnes de largeur égale */
+  padding: 10px; /* Espacement interne */
+  gap: 10px; /* Espace entre les éléments */
+  padding-bottom: 30px;
+}
+
+.EAPbis3{
+ grid-row: span 2;
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+} 
+
