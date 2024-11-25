@@ -15,21 +15,34 @@
 <body class="bodyguard">
   
 <header class="header1">
-  <a href="index.html">
-      <img src="IMG/FaviconR copie.png" width="110%" alt="Icon Tigre" class="logo">
-</a>
+  <!-- Le lien de l'image sera modifié dynamiquement par JavaScript -->
+  <a id="favicon-link" href="index.html">
+    <img src="IMG/FaviconR copie.png" width="110%" alt="Icon Tigre" class="logo">
+  </a>
+  
   <img src="IMG/pseudo.png" width="70%" alt="pseudo">
 </header>
 
 <nav class="lien">
-  <a href="Projets.html" ><h2>Projets</h2></a>
-  <a href="CV.html" ><h2>A propos</h2></a>
-  <a href="https://www.instagram.com/karotysm/?hl=fr" ><h2>Instagram</h2></a>
+  <a href="Projets.html"><h2>Projets</h2></a>
+  <a href="CV.html"><h2>A propos</h2></a>
+  <a href="https://www.instagram.com/karotysm/?hl=fr"><h2>Instagram</h2></a>
 </nav>
-</body>
 
 <script>
-  document.body.style.overflow = 'hidden';  // Empêche le défilement
+  // Fonction pour changer dynamiquement le lien de l'image
+  function updateFaviconLink() {
+    const faviconLink = document.getElementById('favicon-link');
+    if (window.innerWidth <= 768) {
+      faviconLink.href = 'Projets.html';  // Sur petit écran, rediriger vers "Projets.html"
+    } else {
+      faviconLink.href = 'index.html';  // Sur grand écran, rediriger vers "index.html"
+    }
+  }
+
+  // Appliquer le changement de lien lors du chargement de la page et au redimensionnement de la fenêtre
+  window.addEventListener('load', updateFaviconLink);
+  window.addEventListener('resize', updateFaviconLink);
 </script>
 
 </body>
