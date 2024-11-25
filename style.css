@@ -16,109 +16,153 @@ body{
 
 /* Guarde */
 
-.bodyguard{
-
-    width: 100vw;       /* 100% de la largeur de la fenêtre */
-    height: 400px;      /* 100% de la hauteur de la fenêtre */
-        margin: 0;           /* Enlève les marges par défaut du navigateur */
-        padding: 0;          /* Enlève les paddings par défaut */
-    }
+.bodyguard {
+  width: 100vw; /* 100% de la largeur de la fenêtre */
+  height: 400px; /* Hauteur de l'élément */
+  margin: 0; /* Pas de marges par défaut */
+  padding: 0; /* Pas de padding par défaut */
+}
 
 .header1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Centre les éléments horizontalement */
-    align-items: center;
-    background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    width: 100vw; /* Prend toute la largeur de la fenêtre */
-    gap: 20px; /* Espace entre les images */
-    overflow: hidden; /* Évite tout débordement éventuel */
-    padding: 24px;
-    grid-row: auto auto;
-    margin-top: -100px;
-   
-   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
+  height: 100vh; /* Hauteur pleine fenêtre */
+  width: 100vw; /* Largeur pleine fenêtre */
+  gap: 20px;
+  padding: 24px;
+  margin-top: -100px;
+  box-sizing: border-box;
 }
 
-.logo:hover{
-    animation: wiggle 0.5s; /* pour animer le logo en survole */
-  }
-.logo{
-    margin-top:30%;
-}
-  
-  
-  @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
-    100% { transform: rotate(0deg); }
-  }
-
-.header1 img{
-    display: flex;
+.logo:hover {
+  animation: wiggle 0.5s; /* Animation de rotation */
 }
 
-.lien{
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
-    margin-bottom: 50px;
-    font-family: "cofo-sans-pixel", sans-serif;
-    color: #f4f6e4;;
-    font-size: 150%;
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    width: 100vw; /* Prend toute la largeur de la fenêtre */
+.logo {
+  margin-top: 30%;
 }
 
-.lien a{
-    text-decoration: none;
-    color: #f4f6e4;
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.header1 img {
+  display: flex;
+}
+
+.lien {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrer les éléments */
+  gap: 10%;
+  background-color: rgba(255, 84, 22, 0.8); /* Fond orange */
+  margin-bottom: 50px;
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: #f4f6e4;
+  font-size: 150%; /* Taille de police par défaut */
+  height: auto; /* La hauteur s'ajuste à son contenu */
+  width: 100%; /* Prendre toute la largeur disponible */
+  text-align: center; /* Centrer les liens */
+  box-sizing: border-box; /* Inclure les paddings dans la largeur */
+  padding: 10px;
+  overflow: hidden; /* Éviter les débordements */
+  flex-wrap: wrap; /* Permet de réorganiser les éléments si nécessaire */
+  min-height: 60px; /* Minimum height pour éviter que tout disparaisse */
 }
 
 .lien a {
-    transition: color 0.5s ease; /* Ajout d‘une transition pour une animation plus fluide */
+  text-decoration: none;
+  color: #f4f6e4;
+  transition: color 0.5s ease; /* Transition fluide */
 }
 
 .lien a:hover {
-    animation: colorchange 1s ease forwards; /* Applique l‘animation avec durée et direction */
+  animation: colorchange 1s ease forwards;
 }
 
 @keyframes colorchange {
-    0%, 100% {
-        color: #182bf8; /* Couleur initiale et finale */}
-    40% {
-        color:  #182bf8; /* Exemple de couleur au milieu de l‘animation */}
-    60% {
-        color: #182bf8; /* Exemple de couleur au milieu de l‘animation */ }
-    20%, 50%, 80% {
-        color: #182bf8; /* Couleur intermédiaire */}
+  0%, 100% {
+      color: #182bf8;
+  }
+  40%, 60%, 80% {
+      color: #182bf8;
+  }
+  20%, 50% {
+      color: #182bf8;
+  }
 }
+
+@media screen and (max-width: 768px) {
+  /* Pour les écrans plus petits que 768px */
+  .lien {
+      flex-direction: column; /* Empiler les éléments verticalement */
+      align-items: center; /* Centrer horizontalement */
+      gap: 15px; /* Espacement entre les liens */
+      height: auto; /* Ajuster la hauteur selon le contenu */
+      width: 100%; /* Prendre toute la largeur disponible */
+      padding: 10px; /* Espacement interne */
+      box-sizing: border-box; /* Inclure les paddings dans les dimensions */
+      max-width: 100vw; /* Empêcher l'élément de dépasser */
+  }
+
+  .lien a {
+      font-size: 16px; /* Réduit la taille du texte */
+      padding: 5px; /* Un peu d'espacement interne */
+      max-width: 100%; /* Ne pas dépasser la largeur */
+      word-wrap: break-word; /* Permet au texte de se casser s'il est trop long */
+  }
+
+  .lien {
+      overflow: visible; /* Permet d'afficher tout le contenu sans être masqué */
+      min-height: 60px; /* Assure que la hauteur minimale est respectée */
+  }
+}
+
+
+
+
+
 
 /* CV */
 
 .CV {
-    display: grid;
-    grid-template-columns: 60% 35%; /* Tailles des colonnes */
-    gap: 20px;
-    padding: 24px;
-  }
-  
-  .CVleft {
-    padding: 20px;
-    margin: 35px 0 0 75px; /* Combine les marges en une seule ligne */
-  }
+  display: grid;
+  grid-template-columns: 60% 35%; /* Tailles des colonnes pour les écrans larges */
+  gap: 20px;
+  padding: 24px;
+}
 
+.CVleft {
+  padding: 20px;
+  margin: 35px 0 0 75px; /* Marges plus grandes sur grand écran */
+}
 
+.CVright img {
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+  position: bottom;
+}
+
+/* Media Query pour les écrans mobiles */
+@media (max-width: 768px) {
   .CVright img {
-    justify-content: center;
-    place-items: center; /* Centre les éléments horizontalement et verticalement */
-    position: bottom;
+      display: none; /* Cache l'image en dessous de 768px */
   }
 
+  .CV {
+      grid-template-columns: 1fr; /* Utilise une seule colonne pour les petits écrans */
+  }
+
+  .CVleft {
+      margin: 20px; /* Réduit toutes les marges à 20px pour une disposition plus uniforme */
+  }
+}
   
   
   /* Styles de titres */
