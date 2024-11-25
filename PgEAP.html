@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Edgar Allan Poe</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="IMG/Favcicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Anne-Claire Michi, designer graphique.,Page projet, Coffret sur Edgar Allan Poe">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kxo2ozt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <div class="headerL">
+            <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
+            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+        </div>
+        <div class="headerR">
+           <a href="Projets.html" >Projets</a>
+           <a href="CV.html" >A propos</a>
+           <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
+        </div>
+       
+      </header>
+
+      <button onclick="scrollToTop()" id="backToTopBtn" class="button1">^</button>
+
+      <script>
+           const projets = document.querySelectorAll('.projet');
+      projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+          projets.forEach(p => p.classList.add('unactive'));
+          projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+          projets.forEach(p => p.classList.remove('unactive'));
+        });
+      });
+  
+  
+  
+      window.onscroll = function() { toggleBackToTopButton() };
+  
+  function toggleBackToTopButton() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  }
+  
+  // Fonction pour revenir en haut
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+      </script>
+
+<div class="all">
+
+    <div class="leftC">
+        <h2 class="h2in">Projet</h2>
+        <h3>Coffret d‘artiste sur Edgar Allan Poe</h3>
+        <p> Projet visant à mettre en avant l‘œuvre de l‘écrivain américain Edgar Allan Poe et à étoffer son image auprès du grand public qui le connaît seulement comme un écrivain morbide et étrange. Les différents objets graphiques qui composent ce coffret, allant de l‘édition à la linogravure, en passant par la création typographique, permettent une première approche de sa bibliographie et montrent l‘étendue de son influence sur notre culture. </p>
+
+      <h2 class="h2in">Description</h2>
+      <p>Par ordre d‘apparition:</p>
+      <ul>
+        <li>Poster de présentation du coffret, format 60x80 cm</li>
+        <li>Un ensemble de trois posters typographiques, format 35x50 cm, reprenant des citations d‘Edgar Allan Poe ainsi que l‘abécédaire typographique créer pour ce projet</li>
+        <li>Leporello illustrée du poème "The Raven", 19x17 cm (fermé), 12 pages <br> Illustrations réalisées sur Clip Studio Pro</li>
+        <li>Catalogue d‘œuvres influencées par Edgar Allan Poe, format A4 (fermé), 54 pages</li>
+        <li>Marque-pages en linogravure, 15x6 cm</li>
+        <li>Dépliant sur la méthode cryptographique d‘Edgar Allan Poe, format 12x12 cm (fermé), 24x48cm</li>
+
+
+      <h2 class="h2in">Date</h2>
+      <p>2024</p>
+      
+      </div>
+
+      <div class="rightC">
+
+
+        <div class="EAP">
+          <p></p>
+          <img  src="DEAP/poster_copie.jpg" alt="Poster Coffret Edgar Allan Poe">
+        </div>
+        <p></p>
+
+        <div class="EAP1">
+          <img  src="DEAP/P1_Page_1.jpg" alt="Poster typo Citation 1">
+          <img  src="DEAP/P1_Page_2.jpg" alt="Poster typo Citation 2">
+          <img  src="DEAP/P1_Page_3.jpg" alt="Poster typo Citation 3">
+          <p></p>
+          <img class="EAPbis" src="DEAP/Alphabet.jpg" alt="Specimen Typo">
+        </div>
+
+        <div class="EAP1">
+          <img class="EAPbis" src="DEAP/Raven/Raven.png" alt="Edition the Raven illustré">
+          <img class="EAPbis2" src="DEAP/Raven/RavenP1.jpg" alt="Page 1 The Raven illustré">
+          <img class="EAPbis2" src="DEAP/Raven/RavenP3.jpg" alt="Page 3 The Raven illustré">
+          <img class="EAPbis2" src="DEAP/Raven/RavenP4.jpg" alt="Page 4 The Raven illustré">
+         </div>
+
+         <div class="EAP2" >
+          <img class="EAPbis3" src="DEAP/Influence/REF.png" alt="Édition influence">
+          <img src="DEAP/Influence/P1 copie.jpg" alt="Page Influence Edagar Allan Poe">
+          <img src="DEAP/Influence/P3 copie.jpg" alt="Page Influence Edagar Allan Poe">
+          <img class="EAPbis3" src="DEAP/Influence/DSC08490.jpg" alt="Photo édition influence">
+          <img src="DEAP/Influence/p2 copie.jpg" alt="Page Influence Edagar Allan Poe">
+          
+
+          </div>
+
+          <div class="EAP1">
+            <img class="big2" src="DEAP/MP/DSC08509.jpg" alt=" Photo Marque-pages linogravure">
+            <img class="big2" src="DEAP/MP/DSC08865.jpg" alt=" Photo Marque-pages linogravure">
+            <p></p>
+            </div>
+
+            <div class="EAP2" >
+              <img src="DEAP/Crypto/Crypto1.jpg" alt="Depliant cryptographie face 1">
+              <img src="DEAP/Crypto/Crypto2.jpg" alt="Depliant cryptographie face 2">
+    
+              </div>
+ </div>
+
+</body>
+</html>
