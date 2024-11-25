@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Art Press</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="IMG/Favcicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Anne-Claire Michi, designer graphique.,Page projet, Art Press">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kxo2ozt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <div class="headerL">
+            <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
+            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+        </div>
+        <div class="headerR">
+           <a href="Projets.html" >Projets</a>
+           <a href="CV.html" >A propos</a>
+           <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
+        </div>
+       
+      </header>
+
+      <button onclick="scrollToTop()" id="backToTopBtn" class="button1">^</button>
+
+      <script>
+           const projets = document.querySelectorAll('.projet');
+      projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+          projets.forEach(p => p.classList.add('unactive'));
+          projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+          projets.forEach(p => p.classList.remove('unactive'));
+        });
+      });
+  
+  
+  
+      window.onscroll = function() { toggleBackToTopButton() };
+  
+  function toggleBackToTopButton() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  }
+  
+  // Fonction pour revenir en haut
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+      </script>
+
+<div class="all">
+
+    <div class="leftC">
+        <h2 class="h2in">Projet</h2>
+            <h3>Art Press</h3>
+            <p> Un fanzine composé d’une série de collage réalisés sous trois jours. Le catalogue d’images utilisées a été extrait de différents magazines d’art.
+
+              <h2 class="h2in">Description</h2>
+              <p>Fanzine de format A5 (fermé)</p>           
+    
+          <h2 class="h2in">Date</h2>
+          <p>2022</p>
+          
+          </div>
+
+          <div class="rightC">
+            
+           
+           
+            <div class="STAB" >
+            <p> </p>
+            <img src="DAP/AP.jpg" alt="Couverture Fanzine">
+            <p> </p>
+            <img src="DAP/AP2.jpg" alt="Page 1/2">
+            <img src="DAP/AP4.jpg" alt="Page 3/4">
+            <img src="DAP/AP5.jpg" alt="Page 5/6">
+            <img src="DAP/AP6.jpg" alt="Page 7/8">
+            <img src="DAP/AP7.jpg" alt="Page 9/10">
+            <img src="DAP/AP8.jpg" alt="Page 11/12">
+            <img src="DAP/AP9.jpg" alt="Page 13/14">
+            <img src="DAP/AP10.jpg" alt="Page 15/16">
+            <img src="DAP/AP11.jpg" alt="Page 17/18">
+            <img src="DAP/AP12.jpg" alt="Page 19/20">
+            <img src="DAP/AP13.jpg" alt="Page 22/23">
+            <img src="DAP/AP14.jpg" alt="Page 24/25">
+            <p> </p>
+            <img src="DAP/AP15.jpg" alt="Dos Fanzine">
+            <p> </p>
+            </div>
+            
+
+          </div>
+    </div>
+
+  </body>
+  </html>
