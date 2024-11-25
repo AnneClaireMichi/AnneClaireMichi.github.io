@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Poster</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="IMG/Favcicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Anne-Claire Michi, designer graphique.,Page projet, Poster">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kxo2ozt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <div class="headerL">
+            <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
+            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+        </div>
+        <div class="headerR">
+           <a href="Projets.html" >Projets</a>
+           <a href="CV.html" >A propos</a>
+           <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
+        </div>
+       
+      </header>
+
+      <button onclick="scrollToTop()" id="backToTopBtn" class="button1">^</button>
+
+      <script>
+           const projets = document.querySelectorAll('.projet');
+      projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+          projets.forEach(p => p.classList.add('unactive'));
+          projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+          projets.forEach(p => p.classList.remove('unactive'));
+        });
+      });
+  
+  
+  
+      window.onscroll = function() { toggleBackToTopButton() };
+  
+  function toggleBackToTopButton() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  }
+  
+  // Fonction pour revenir en haut
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+      </script>
+
+<div class="all">
+
+    <div class="leftC">
+        <h2 class="h2in">Projet</h2>
+        <h3>To make pictures talk</h3>
+        <p> Création d‘une série de poster, chacun traitant d‘un sujet complètement différent.</p> 
+        <p>Pour ce projet, l‘image (illustration/ collage) est centrale, le texte sert à appuyé le message dans un second temps de lecture.</p>
+
+      <h2 class="h2in">Description</h2>
+      <p>Affiches, 60x80 cm</p>
+
+
+      <h2 class="h2in">Date</h2>
+      <p>2023</p>
+      
+      </div>
+      
+
+      <div class="rightC">
+      
+        <div class="carousel-wrapper">
+            <!-- Carrousel d‘images avec texte en dessous -->
+            <div class="carousel-container">
+              <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+              
+              <div class="carousel">
+                <div class="slide"><img src="DPoster/POSTER2.jpg" alt="Poster Afrique"></div>
+                <div class="slide"><img src="DPoster/POSTER-min.jpg" alt="Poster Science"></div>
+                <div class="slide"><img src="DPoster/POSTER3-min.jpg" alt="Poster Mc DO"></div>
+                <div class="slide"><img src="DPoster/POSTER5.jpg" alt="Poster Abysse"></div>
+                <div class="slide"><img src="DPoster/POSTER6.jpg" alt="Poster Shining"></div>
+              </div>
+          
+              <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+          
+            <!-- Texte qui change en bas de l‘image -->
+            <div class="carousel-text" id="carouselText">Texte pour l‘image 1</div>
+          </div>
+          
+          <script>
+            let currentIndex = 0;
+          
+            const texts = [
+              "Frontières Politiques",
+              "Les Dangers du Progrès",
+              "Psychologie des Couleurs",
+              "Exploration des Abysses",
+              "Un film de Stanley Kubrick"
+            ];
+          
+            const slides = document.querySelectorAll('.slide');
+            const textElement = document.getElementById('carouselText');
+          
+            function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+              textElement.textContent = texts[index];
+            }
+          
+            function changeSlide(direction) {
+              const totalSlides = slides.length;
+              currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+              showSlide(currentIndex);
+            }
+          
+            showSlide(currentIndex);
+          </script>
+
+</body>
+</html>
