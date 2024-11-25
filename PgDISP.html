@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page La Disparition</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="IMG/Favcicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Anne-Claire Michi, designer graphique.,Page projet, La Disparition">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kxo2ozt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <div class="headerL">
+            <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
+            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+        </div>
+        <div class="headerR">
+           <a href="Projets.html" >Projets</a>
+           <a href="CV.html" >A propos</a>
+           <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
+        </div>
+       
+      </header>
+
+      <button onclick="scrollToTop()" id="backToTopBtn" class="button1">^</button>
+
+      <script>
+           const projets = document.querySelectorAll('.projet');
+      projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+          projets.forEach(p => p.classList.add('unactive'));
+          projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+          projets.forEach(p => p.classList.remove('unactive'));
+        });
+      });
+  
+  
+  
+      window.onscroll = function() { toggleBackToTopButton() };
+  
+  function toggleBackToTopButton() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  }
+  
+  // Fonction pour revenir en haut
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+      </script>
+
+<div class="all">
+
+    <div class="leftC">
+        <h2 class="h2in">Projet</h2>
+          <h3>La Disparition</h3>
+          <p> Création d‘une série d‘images inspirées par l‘avant-propos du livre "La Disparition" par Georges Perec. Deux de ces images ont ensuite été utilisées pour proposer deux couvertures au livre de Perec.</p> 
+          <p>Un objectif du projet a été d‘apprendre à appréhender l‘I.A en tant que graphiste en l‘utilisant pour la création de la moitié des images. </p>
+  
+        <h2 class="h2in">Description</h2>
+       
+        <p>Par ordre d‘apparition:</p>
+      <ul>
+        <li>Format 34,8x48 cm, Images 2 et 4 du carrousel ont été réalisées à l‘aide d‘IA</li>
+        <li>Couvertures (fermées), 22x34 cm</li>
+        
+  
+  
+        <h2 class="h2in">Date</h2>
+        <p>2024</p>
+        
+        </div>
+
+
+        <div class="rightC">
+    
+              
+                <!-- Carrousel d‘images -->
+                <div class="CDISP">
+                  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                  
+                  <div class="carousel">
+                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, sans IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
+                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
+                   
+                    <!-- Ajouter d‘autres images ici -->
+                  </div>
+                  
+                  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+
+
+            
+              
+              <script>
+                let currentIndex = 0;
+              
+                const slides = document.querySelectorAll('.slide');
+                const textElement = document.getElementById('carouselText');
+              
+                function showSlide(index) {
+                    // Masquer toutes les images
+                    slides.forEach(slide => slide.style.display = 'none');
+                    
+                    // Afficher l‘image courante
+                    slides[index].style.display = 'block';
+                }
+              
+                function changeSlide(direction) {
+                    const totalSlides = slides.length;
+                    
+                    // Calculer l‘index de la prochaine image
+                    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                    
+                    // Afficher l‘image et le texte correspondants
+                    showSlide(currentIndex);
+                }
+              
+                // Initialiser le carrousel avec la première image et le texte
+                showSlide(currentIndex);
+              </script>
+
+<img src="DDISP/Rendu 1.1.jpg" alt="Proposition Couverture 1" class="DISP">
+<img src="DDISP/Rendu 1.12.jpg" alt="Proposition Couverture 2" class="DISP">
+</div>
+
+</script>
+
+</body>
+</html>
