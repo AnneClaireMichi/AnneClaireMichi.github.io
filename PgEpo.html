@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Epologia</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="IMG/Favcicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Anne-Claire Michi, designer graphique.,Page projet, Revue Epologia">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kxo2ozt.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <div class="headerL">
+            <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
+            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+        </div>
+        <div class="headerR">
+           <a href="Projets.html" >Projets</a>
+           <a href="CV.html" >A propos</a>
+           <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
+        </div>
+       
+      </header>
+
+      <button onclick="scrollToTop()" id="backToTopBtn" class="button1">^</button>
+
+      <script>
+           const projets = document.querySelectorAll('.projet');
+      projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+          projets.forEach(p => p.classList.add('unactive'));
+          projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+          projets.forEach(p => p.classList.remove('unactive'));
+        });
+      });
+  
+  
+  
+      window.onscroll = function() { toggleBackToTopButton() };
+  
+  function toggleBackToTopButton() {
+      const button = document.getElementById("backToTopBtn");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  }
+  
+  // Fonction pour revenir en haut
+  function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+      </script>
+
+<div class="all">
+
+    <div class="leftC">
+        <h2 class="h2in">Projet</h2>
+        <h3>Epologia</h3>
+        <p> Le projet Epologia repose sur l’idée de créer un magazine destiné à vulgariser la science pour un large public. Afin de faciliter l’apprentissage des lecteurs et de capter leur attention, la revue mise sur l’image, dont la majorité ont été conçues spécialement pour ce projet, ainsi que sur un vocabulaire graphique prédominant, stimulant et accrocheur. <br> L’objectif est de proposer un objet que le lecteur ait envie de parcourir et de découvrir, autant pour son esthétique que pour richesse son contenu.
+        </p>
+
+      <h2 class="h2in">Description</h2>
+      <p>Revue, A4 (fermé), 47 pages</p>
+
+
+      <h2 class="h2in">Date</h2>
+      <p>2024</p>
+      
+      </div>
+      
+
+      <div class="rightC">
+        <img src="DEpo/P0.jpg" alt="Couverture Magazine" class="mag"> 
+        <img src="DEpo/P1.jpg" alt="Sommaire" class="mag">
+        <img src="DEpo/P2.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P3.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P4.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P5.jpg" alt="Pages Magazine class="mag">
+        <img src="DEpo/P6.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P7.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P8.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P9.jpg" alt="Pages Magazine" class="mag">
+        <img src="DEpo/P10.jpg" alt="Pages Magazine" class="mag">
+
+      </div>
+
+    </body>
+    </html>
