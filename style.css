@@ -690,6 +690,7 @@ p {
   gap: 24px; /* Espace entre les éléments */
   justify-content: center;
   place-items: center; /* Centre les éléments horizontalement et verticalement */
+  margin-right: 30px;
 }
 
 .Couv p{

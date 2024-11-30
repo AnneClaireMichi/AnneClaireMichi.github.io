@@ -16,7 +16,7 @@
   
 <header class="header1">
   <!-- Le lien de l'image sera modifié dynamiquement par JavaScript -->
-  <a id="favicon-link" href="index.html">
+  <a id="favicon-link" href="Ang_index.html">
     <img src="IMG/FaviconR copie.png" width="110%" alt="Icon Tigre" class="logo">
   </a>
   
@@ -24,10 +24,10 @@
 </header>
 
 <nav class="lien">
-  <a href="Projets.html"><h2>Projets</h2></a>
-  <a href="CV.html"><h2>A propos</h2></a>
+  <a href="Ang_Projets.html"><h2>Projects</h2></a>
+  <a href="Ang_CV.html"><h2>About me</h2></a>
   <a href="https://www.instagram.com/karotysm/?hl=fr"><h2>Instagram</h2></a>
-  <a href="Ang_index.html" ><h2>Eng</h2></a>
+  <a href="index.html" ><h2>Fr</h2></a>
 </nav>
 
 <script>
@@ -35,9 +35,9 @@
   function updateFaviconLink() {
     const faviconLink = document.getElementById('favicon-link');
     if (window.innerWidth <= 768) {
-      faviconLink.href = 'Projets.html';  // Sur petit écran, rediriger vers "Projets.html"
+      faviconLink.href = 'Ang_Projets.html';  // Sur petit écran, rediriger vers "Projets.html"
     } else {
-      faviconLink.href = 'index.html';  // Sur grand écran, rediriger vers "index.html"
+      faviconLink.href = 'Ang_index.html';  // Sur grand écran, rediriger vers "index.html"
     }
   }
 
