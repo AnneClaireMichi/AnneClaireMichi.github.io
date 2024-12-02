@@ -32,7 +32,7 @@ body{
   width: 100vw; /* Largeur pleine fenêtre */
   gap: 20px;
   padding: 24px;
-  margin-top: -100px;
+  margin-top: -125px;
   box-sizing: border-box;
 }
 
@@ -62,7 +62,7 @@ body{
   align-items: center; /* Centrer les éléments */
   gap: 10%;
   background-color: rgba(255, 84, 22, 0.8); /* Fond orange */
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   font-family: "cofo-sans-pixel", sans-serif;
   color: #f4f6e4;
   font-size: 155%; /* Taille de police par défaut */
