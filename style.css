@@ -62,10 +62,10 @@ body{
   align-items: center; /* Centrer les éléments */
   gap: 10%;
   background-color: rgba(255, 84, 22, 0.8); /* Fond orange */
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   font-family: "cofo-sans-pixel", sans-serif;
   color: #f4f6e4;
-  font-size: 150%; /* Taille de police par défaut */
+  font-size: 155%; /* Taille de police par défaut */
   height: auto; /* La hauteur s'ajuste à son contenu */
   width: 100%; /* Prendre toute la largeur disponible */
   text-align: center; /* Centrer les liens */
@@ -112,7 +112,7 @@ body{
   }
 
   .lien a {
-      font-size: 16px; /* Réduit la taille du texte */
+      font-size: 19px; /* Réduit la taille du texte */
       padding: 5px; /* Un peu d'espacement interne */
       max-width: 100%; /* Ne pas dépasser la largeur */
       word-wrap: break-word; /* Permet au texte de se casser s'il est trop long */
