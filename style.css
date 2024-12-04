@@ -747,3 +747,20 @@ p {
   place-items: center; /* Centre les éléments horizontalement et verticalement */
 } 
 
+.footer {
+  display: flex; /* Active Flexbox */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre horizontalement */
+  gap: 10px; /* Espacement entre les éléments */
+  
+  width: 100%; /* Largeur de 100% */
+}
+
+.footer p {
+  color: rgba(255, 84, 22, 0.8); /* Couleur du texte */
+  padding: 10px; /* Espacement interne */
+  font-family: "cofo-sans-pixel", sans-serif; /* Police personnalisée */
+  font-size: 16px; /* Taille de la police */
+  text-align: center; /* Texte centré */
+}
+
