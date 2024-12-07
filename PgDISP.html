@@ -18,7 +18,7 @@
         <!-- https://jenseign.com/le-h1-logo/ -->
         <div class="headerL">
             <a href="index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
-            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+            <a href="index.html"><img  src="IMG/pseudo.png" alt="Pseudo" width="250px" ></a>
         </div>
         <div class="headerR">
            <a href="Projets.html" >Projets</a>
@@ -68,14 +68,14 @@
     <div class="leftC">
         <h2 class="h2in">Projet</h2>
           <h3>La Disparition</h3>
-          <p> Création d‘une série d‘images inspirées par l‘avant-propos du livre "La Disparition" par Georges Perec. Deux de ces images ont ensuite été utilisées pour proposer deux couvertures au livre de Perec.</p> 
-          <p>Un objectif du projet a été d‘apprendre à appréhender l‘I.A en tant que graphiste en l‘utilisant pour la création de la moitié des images. </p>
+          <p> Création d'une série d'images inspirées par l'avant-propos du livre "La Disparition" par Georges Perec. Deux de ces images ont ensuite été utilisées pour proposer deux couvertures au livre de Perec.</p> 
+          <p>Un objectif du projet a été d'apprendre à appréhender l'I.A en tant que graphiste en l'utilisant pour la création de la moitié des images. </p>
   
         <h2 class="h2in">Description</h2>
        
-        <p>Par ordre d‘apparition:</p>
+        <p>Par ordre d'apparition:</p>
       <ul>
-        <li>Format 34,8x48 cm, Images 2 et 4 du carrousel ont été réalisées à l‘aide d‘IA</li>
+        <li>Format 34,8x48 cm, Images 2 et 4 du carrousel ont été réalisées à l'aide d'IA</li>
         <li>Couvertures (fermées), 22x34 cm</li>
         
   
@@ -89,17 +89,17 @@
         <div class="rightC">
     
               
-                <!-- Carrousel d‘images -->
+                <!-- Carrousel d'images -->
                 <div class="CDISP">
                   <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
                   
                   <div class="carousel">
-                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, sans IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
-                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
+                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, sans IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
+                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
                    
-                    <!-- Ajouter d‘autres images ici -->
+                    <!-- Ajouter d'autres images ici -->
                   </div>
                   
                   <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -118,17 +118,17 @@
                     // Masquer toutes les images
                     slides.forEach(slide => slide.style.display = 'none');
                     
-                    // Afficher l‘image courante
+                    // Afficher l'image courante
                     slides[index].style.display = 'block';
                 }
               
                 function changeSlide(direction) {
                     const totalSlides = slides.length;
                     
-                    // Calculer l‘index de la prochaine image
+                    // Calculer l'index de la prochaine image
                     currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
                     
-                    // Afficher l‘image et le texte correspondants
+                    // Afficher l'image et le texte correspondants
                     showSlide(currentIndex);
                 }
               

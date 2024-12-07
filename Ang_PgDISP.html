@@ -18,7 +18,7 @@
         <!-- https://jenseign.com/le-h1-logo/ -->
         <div class="headerL">
             <a href="Ang_index.html"><img src="IMG/FaviconR copie.png" width="150px" alt="Icon Tigre" class="logoG"></a>
-            <img  src="IMG/pseudo.png" alt="Pseudo" width="250px" >
+            <a href="Ang_index.html"><img  src="IMG/pseudo.png" alt="Pseudo" width="250px" ></a>
         </div>
         <div class="headerR">
            <a href="Ang_Projets.html" >Projects</a>
@@ -89,17 +89,17 @@
         <div class="rightC">
     
               
-                <!-- Carrousel d‘images -->
+                <!-- Carrousel d'images -->
                 <div class="CDISP">
                   <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
                   
                   <div class="carousel">
-                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, sans IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
-                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l‘avant-propos de “La Disparition“, avec IA_2"></div>
+                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, sans IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_1"></div>
+                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
+                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
                    
-                    <!-- Ajouter d‘autres images ici -->
+                    <!-- Ajouter d'autres images ici -->
                   </div>
                   
                   <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -118,17 +118,17 @@
                     // Masquer toutes les images
                     slides.forEach(slide => slide.style.display = 'none');
                     
-                    // Afficher l‘image courante
+                    // Afficher l'image courante
                     slides[index].style.display = 'block';
                 }
               
                 function changeSlide(direction) {
                     const totalSlides = slides.length;
                     
-                    // Calculer l‘index de la prochaine image
+                    // Calculer l'index de la prochaine image
                     currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
                     
-                    // Afficher l‘image et le texte correspondants
+                    // Afficher l'image et le texte correspondants
                     showSlide(currentIndex);
                 }
               

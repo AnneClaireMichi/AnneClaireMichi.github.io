@@ -1,12 +1,12 @@
 *{
-    box-sizing: border-box; /* pour que les padding et margin ne modifient pas la taille de l‘élément */
+    box-sizing: border-box; /* pour que les padding et margin ne modifient pas la taille de l'élément */
 }
 
 body{
     background-color: #f4f6e4;
     font-family: Arial, sans-serif;
     margin: 0; /* pour éviter les marges par défaut du navigateur */
-    line-height: 1.5; /* hauteur de ligne pour la lecture à l‘écran*/
+    line-height: 1.5; /* hauteur de ligne pour la lecture à l'écran*/
     text-decoration: none; 
      color: inherit;
     overflow-x: hidden; /* Masque le débordement horizontal */
@@ -261,7 +261,7 @@ body{
   }
 
   .headerL img {
-      width: 80px; /* Réduit la taille de l‘image logo */
+      width: 80px; /* Réduit la taille de l'image logo */
   }
 
   .headerR {
@@ -287,20 +287,20 @@ body{
 
 
 .headerR a {
-    transition: color 0.5s ease; /* Ajout d‘une transition pour une animation plus fluide */
+    transition: color 0.5s ease; /* Ajout d'une transition pour une animation plus fluide */
 }
 
 .headerR a:hover {
-    animation: colorchange 1s ease forwards; /* Applique l‘animation avec durée et direction */
+    animation: colorchange 1s ease forwards; /* Applique l'animation avec durée et direction */
 }
 
 @keyframes colorchange {
     0%, 100% {
         color: #182bf8; /* Couleur initiale et finale */}
     40% {
-        color:  #182bf8; /* Exemple de couleur au milieu de l‘animation */}
+        color:  #182bf8; /* Exemple de couleur au milieu de l'animation */}
     60% {
-        color: #182bf8; /* Exemple de couleur au milieu de l‘animation */ }
+        color: #182bf8; /* Exemple de couleur au milieu de l'animation */ }
     20%, 50%, 80% {
         color: #182bf8; /* Couleur intermédiaire */}
 }
@@ -334,7 +334,7 @@ body{
     font-size:60px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Petit effet d‘ombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Petit effet d'ombre */
     transition: opacity 0.3s;
     margin-bottom: 60px;
     padding-bottom: 50px;
@@ -350,7 +350,7 @@ body{
 /* Page Projet */
 .Projet {
   display: flex;
-  gap: 0; /* Pas d‘espace entre les colonnes */
+  gap: 0; /* Pas d'espace entre les colonnes */
   margin: 24px;
 }
 
@@ -358,7 +358,7 @@ body{
   flex: 1; /* Les colonnes prennent la même largeur */
   display: flex;
   flex-direction: column;
-  gap: 0; /* Pas d‘espace entre les images verticalement */
+  gap: 0; /* Pas d'espace entre les images verticalement */
   margin-top: 24px;
 }
 
@@ -374,16 +374,16 @@ body{
   width: 50px;
   height: 50px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.7); /* Filtre gris et opacité pour recouvrir l‘icône */
+  filter: grayscale(100%) opacity(0.7); /* Filtre gris et opacité pour recouvrir l'icône */
   transition: filter 0.3s ease; /* Transition douce lors du changement de filtre */
-  position: relative; /* Nécessaire pour positionner le liseré au bas de l‘icône */
+  position: relative; /* Nécessaire pour positionner le liseré au bas de l'icône */
 }
 
 .icon:hover {
-  filter: grayscale(0%) opacity(1); /* Retirer le filtre gris et augmenter l‘opacité */
+  filter: grayscale(0%) opacity(1); /* Retirer le filtre gris et augmenter l'opacité */
 }
 
-/* Conteneur de l‘image avec le titre */
+/* Conteneur de l'image avec le titre */
 .image-container {
   position: relative;
   display: inline-block;
@@ -391,7 +391,7 @@ body{
 
 .image-title {
   position: absolute;
-  z-index: 1; /* Plus la valeur est élevée, plus l‘élément est au-dessus */
+  z-index: 1; /* Plus la valeur est élevée, plus l'élément est au-dessus */
   top: 10px; /* Positionne le titre légèrement au-dessus du bas */
   left: 50%;
   transform: translateX(-50%); /* Centre le titre horizontalement */
@@ -402,7 +402,7 @@ body{
   font-size: 16px; /* Taille par défaut */
   font-family: "cofo-sans-pixel", sans-serif;
   opacity: 0; /* Masque le titre par défaut */
-  transition: opacity 0.3s ease; /* Transition pour l‘apparition du titre */
+  transition: opacity 0.3s ease; /* Transition pour l'apparition du titre */
 }
 
 /* Pour les écrans de taille inférieure à 768px (tablettes et téléphones) */
@@ -419,7 +419,7 @@ body{
   }
 }
 
-/* Effet au survol de l‘image : titre apparaît */
+/* Effet au survol de l'image : titre apparaît */
 .image-container:hover .image-title {
   opacity: 1; /* Affiche le titre au survol */
 }
@@ -488,8 +488,8 @@ p {
 
   .leftC, .rightC {
     margin: 0 auto;         /* Centre les éléments */
-    padding: 10px 15px;     /* Moins de padding pour économiser de l‘espace */
-    position: static;       /* Supprime l‘effet "sticky" */
+    padding: 10px 15px;     /* Moins de padding pour économiser de l'espace */
+    position: static;       /* Supprime l'effet "sticky" */
     top: auto;
     margin-top: 0;
   }
@@ -558,13 +558,13 @@ p {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Animation de l‘agrandissement et ajout de l‘ombre */
+/* Animation de l'agrandissement et ajout de l'ombre */
 .STAB img:hover {
   transform: scale(2); /* Agrandissement */
   box-shadow: 0px 8px 20px rgba(6, 6, 13, 0.5); /* Ombre */
 }
 
-/* Définition de l‘animation grow */
+/* Définition de l'animation grow */
 @keyframes grow {
   100% {
     transform: scale(2); /* Agrandissement de 120% */
@@ -667,13 +667,13 @@ p {
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Animation de l‘agrandissement et ajout de l‘ombre */
+/* Animation de l'agrandissement et ajout de l'ombre */
 .big2 img:hover {
   transform: scale(2); /* Agrandissement */
   box-shadow: 0px 8px 20px rgba(6, 6, 13, 0.5); /* Ombre */
 }
 
-/* Définition de l‘animation grow */
+/* Définition de l'animation grow */
 @keyframes grow {
   100% {
     transform: scale(2); /* Agrandissement de 120% */
