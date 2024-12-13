@@ -555,13 +555,13 @@ p {
 
 .OURO{
   display: grid;
-  grid-template-columns: 2fr 3fr; /* Image plus petite (2 parts), vidéo plus grande (3 parts) */
-  padding: 24px;
+  grid-template-columns: 1fr 1fr; /* Image plus petite (2 parts), vidéo plus grande (3 parts) */
+  px;
   gap: 24px; /* Espace entre l'image et la vidéo */
   justify-content: center;
   place-items: center; /* Centre les éléments horizontalement et verticalement */
 }
-.OURO video {
+.OURO img {
   width: 80%; /* Prend toute la largeur disponible */
   height: auto; /* Hauteur ajustée automatiquement */
   border-radius: 15px; /* Coins arrondis */
