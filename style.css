@@ -21,16 +21,20 @@ body{
   height: 400px; /* Hauteur de l'élément */
   margin: 0; /* Pas de marges par défaut */
   padding: 0; /* Pas de padding par défaut */
+  background-color: rgb(255, 112, 60);;
+  overflow: hidden
 }
 
 .header1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 84, 22, 0.8); /* Fond orange avec opacité */
+  background-color: rgb(255, 112, 60); /* Fond orange avec opacité */
   height: 100vh; /* Hauteur pleine fenêtre */
   width: 100vw; /* Largeur pleine fenêtre */
   gap: 20px;
+  padding-bottom: 100px;
   padding: 24px;
   margin-top: -125px;
   box-sizing: border-box;
@@ -41,7 +45,11 @@ body{
 }
 
 .logo {
-  margin-top: 30%;
+  margin-top: 15%;
+}
+
+.pseudo {
+  margin-top: 15%;
 }
 
 @keyframes wiggle {
@@ -53,7 +61,7 @@ body{
 }
 
 .header1 img {
-  display: flex;
+  align-items: center;
 }
 
 .lien {
@@ -61,8 +69,9 @@ body{
   justify-content: center;
   align-items: center; /* Centrer les éléments */
   gap: 10%;
-  background-color: rgba(255, 84, 22, 0.8); /* Fond orange */
+  background-color: rgb(255, 112, 60); /* Fond orange */
   margin-bottom: 80px;
+  
   font-family: "cofo-sans-pixel", sans-serif;
   color: #f4f6e4;
   font-size: 155%; /* Taille de police par défaut */
@@ -70,7 +79,7 @@ body{
   width: 100%; /* Prendre toute la largeur disponible */
   text-align: center; /* Centrer les liens */
   box-sizing: border-box; /* Inclure les paddings dans la largeur */
-  padding: 10px;
+  padding: 15px;
   overflow: hidden; /* Éviter les débordements */
   flex-wrap: wrap; /* Permet de réorganiser les éléments si nécessaire */
   min-height: 60px; /* Minimum height pour éviter que tout disparaisse */
@@ -80,7 +89,10 @@ body{
   text-decoration: none;
   color: #f4f6e4;
   transition: color 0.5s ease; /* Transition fluide */
+
 }
+
+
 
 .lien a:hover {
   animation: colorchange 1s ease forwards;
@@ -98,7 +110,7 @@ body{
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1026px) {
   /* Pour les écrans plus petits que 768px */
   .lien {
       flex-direction: column; /* Empiler les éléments verticalement */
@@ -172,7 +184,7 @@ body{
   }
   
   .h1CV {
-    color: rgba(255, 84, 22, 0.8);
+    color: rgb(255, 112, 60);
     font-size: 3.5em; /* Conversion du % en em pour simplifier la lecture */
   }
   
@@ -183,7 +195,7 @@ body{
   
   .LienCV{
     text-decoration: none;
-    color:  rgba(255, 84, 22, 0.8);
+    color:  rgb(255, 112, 60);
 }
  .CVleft h1{
     font-family:"cofo-sans-pixel", sans-serif ;
@@ -242,12 +254,19 @@ body{
 
 .headerR a {
   text-decoration: none;
-  color: rgba(255, 84, 22, 0.8);
+  color: rgb(255, 112, 60);
   font-family: "cofo-sans-pixel", sans-serif;
 }
 
+.headerR p {
+  font-family: "cofo-sans-pixel", sans-serif;
+  color: #182bf8;
+  font-size: 30px;
+  margin: 0px;
+}
+
 /* Responsivité avec media queries */
-@media (max-width: 768px) {
+@media (max-width: 1070px) {
   .header {
       display: flex;                /* Passe en flexbox pour alignement en colonne */
       flex-direction: column;       /* Les éléments seront empilés en colonne */
@@ -269,6 +288,11 @@ body{
       gap: 20px;
       justify-content: center;      /* Centre les liens */
   }
+
+  .headerR p {
+   font-size: 20px;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -283,6 +307,10 @@ body{
   .header-nav a {
       font-size: medium;
   }
+  .headerR p {
+    font-size: 16px;
+     margin: 0px;
+   }
 }
 
 
@@ -327,8 +355,8 @@ body{
     width: 50px;       /* Largeur du bouton */
     height: 50px;      /* Hauteur du bouton */
     display: none;        /* Masqué par défaut */
-    background-color:  rgba(255, 84, 22, 0.8); /* Couleur de fond */
-    color: white;         /* Couleur du texte */
+    background-color:  rgb(255, 112, 60); /* Couleur de fond */
+    color: #f4f6e4;         /* Couleur du texte */
     border: none;
     padding: 0px 0px;
     font-size:60px;
@@ -395,8 +423,8 @@ body{
   top: 10px; /* Positionne le titre légèrement au-dessus du bas */
   left: 50%;
   transform: translateX(-50%); /* Centre le titre horizontalement */
-  color: white;
-  background-color: rgba(255, 84, 22, 0.8); /* Fond semi-transparent */
+  color: #f4f6e4;
+  background-color: rgb(255, 112, 60); /* Fond semi-transparent */
   padding: 5px;
   border-radius: 5px;
   font-size: 16px; /* Taille par défaut */
@@ -450,7 +478,7 @@ body{
 /* Style des titres et paragraphes */
 .h2in {
   font-family: "cofo-sans-pixel", sans-serif;
-  color: rgba(255, 84, 22, 0.8);
+  color: rgb(255, 112, 60);
   font-size: 20px;
 }
 
@@ -527,9 +555,16 @@ p {
 
 .OURO{
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Trois colonnes de largeur égale */
-  padding: 24px; /* Espacement interne */
-  gap: 24px; /* Espace entre les éléments */
+  grid-template-columns: 2fr 3fr; /* Image plus petite (2 parts), vidéo plus grande (3 parts) */
+  padding: 24px;
+  gap: 24px; /* Espace entre l'image et la vidéo */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+.OURO video {
+  width: 80%; /* Prend toute la largeur disponible */
+  height: auto; /* Hauteur ajustée automatiquement */
+  border-radius: 15px; /* Coins arrondis */
 }
 
 .OUROC
@@ -551,7 +586,6 @@ p {
 }
 
 
-
 /* BIG */
 
 .STAB img {
@@ -571,6 +605,23 @@ p {
   }
 } 
 
+.STABB {
+ 
+  padding: 100px; /* Espacement interne */
+  gap: 30px; /* Espace entre les éléments */
+  justify-content: center;
+}
+
+.STABB img {
+ gap: 30px; /* Espace entre les éléments */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+  position: relative;
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+}
+
 /* Carrousel */
 
 .carousel-wrapper {
@@ -584,6 +635,15 @@ p {
   width: 100%;
   align-items: center;
   justify-content: center
+}
+
+.slide2 {
+  display: block; /* Nécessaire pour que margin auto fonctionne */
+  margin: 0 auto; /* Centre horizontalement */
+  max-width: 80%;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .carousel-text {
@@ -609,6 +669,15 @@ p {
   width: 79%;
 }
 
+.button2 {
+  font-family: "cofo-sans-pixel", sans-serif;
+  background-color:  rgb(255, 112, 60); /* Couleur de fond */
+  color: #f4f6e4;         /* Couleur du texte */
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 30px;
+}
 
 
 /* LA DISPARITION */
@@ -655,7 +724,7 @@ p {
 
 .TrypoK{
   display: grid;
-  grid-template-columns:  33% 33% 33%; /* Trois colonnes de largeur égale */
+  grid-template-columns:  1fr 1fr 1fr; /* Trois colonnes de largeur égale */
   padding: 10px; /* Espacement interne */
   gap: 10px; /* Espace entre les éléments */
   justify-content: center;
@@ -748,19 +817,24 @@ p {
 } 
 
 .footer {
-  display: flex; /* Active Flexbox */
-  flex-direction: column; /* Aligne les éléments verticalement */
+  display: grid;
+  grid-template-columns: 100%;
   align-items: center; /* Centre horizontalement */
   gap: 10px; /* Espacement entre les éléments */
+  text-align: center; /* Texte centré */
+
   
   width: 100%; /* Largeur de 100% */
 }
 
 .footer p {
-  color: rgba(255, 84, 22, 0.8); /* Couleur du texte */
+  color: rgb(255, 112, 60); /* Couleur du texte */
   padding: 10px; /* Espacement interne */
   font-family: "cofo-sans-pixel", sans-serif; /* Police personnalisée */
   font-size: 16px; /* Taille de la police */
   text-align: center; /* Texte centré */
 }
 
+.blue {
+  color: #182bf8!important;
+}

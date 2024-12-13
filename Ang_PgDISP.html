@@ -24,7 +24,7 @@
            <a href="Ang_Projets.html" >Projects</a>
            <a href="Ang_CV.html" >About me</a>
            <a href="https://www.instagram.com/karotysm/?hl=fr" >Instagram</a>
-           <a href="PgDISP.html" >Fr</a>
+           <p><a href="PgDISP.html" >Fr </a>/ Eng</p>
         </div>
        
       </header>
@@ -90,28 +90,28 @@
     
               
                 <!-- Carrousel d'images -->
-                <div class="CDISP">
-                  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                  
-                  <div class="carousel">
-                    <div class="slide"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, sans IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_1"></div>
-                    <div class="slide"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
-                    <div class="slide"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
-                   
-                    <!-- Ajouter d'autres images ici -->
+                <div class="carousel-wrapper">
+                  <div class="carousel-container">
+                    <button class="button2" onclick="changeSlide(-1)"><</button>
+                    
+                    <div class="carousel">
+                      <div class="slide2"><img src="DDISP/DISP2.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, sans IA_1" ></div>
+                      <div class="slide2"><img src="DDISP/DISP1.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_1"></div>
+                      <div class="slide2"><img src="DDISP/DISP3.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
+                      <div class="slide2"><img src="DDISP/DISP4.jpg" alt="IMAGE illustrant l'avant-propos de “La Disparition“, avec IA_2"></div>
+                    </div>
+                    <button class="button2" onclick="changeSlide(1)">></button>
                   </div>
-                  
-                  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      
+                 
                 </div>
-
 
             
               
               <script>
                 let currentIndex = 0;
               
-                const slides = document.querySelectorAll('.slide');
+                const slides = document.querySelectorAll('.slide2');
                 const textElement = document.getElementById('carouselText');
               
                 function showSlide(index) {
