@@ -556,15 +556,15 @@ p {
 .OURO{
   display: grid;
   grid-template-columns: 1fr 1fr; /* Image plus petite (2 parts), vidéo plus grande (3 parts) */
-  px;
+  margin-bottom: 10PX;
   gap: 24px; /* Espace entre l'image et la vidéo */
   justify-content: center;
   place-items: center; /* Centre les éléments horizontalement et verticalement */
 }
 .OURO img {
-  width: 80%; /* Prend toute la largeur disponible */
+  width: 100% ; /* Prend toute la largeur disponible */
   height: auto; /* Hauteur ajustée automatiquement */
-  border-radius: 15px; /* Coins arrondis */
+ 
 }
 
 .OUROC
@@ -728,6 +728,20 @@ p {
   padding: 10px; /* Espacement interne */
   gap: 10px; /* Espace entre les éléments */
   justify-content: center;
+}
+
+.KORAXX{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Image plus petite (2 parts), vidéo plus grande (3 parts) */
+ 
+  gap: 24px; /* Espace entre l'image et la vidéo */
+  justify-content: center;
+  place-items: center; /* Centre les éléments horizontalement et verticalement */
+}
+.Koraxx img {
+  width: 80%; /* Prend toute la largeur disponible */
+  height: auto; /* Hauteur ajustée automatiquement */
+  border-radius: 15px; /* Coins arrondis */
 }
 
 /* BIG */
